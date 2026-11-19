@@ -1,0 +1,58 @@
+# 核心依赖（按功能分组），适合在新机器上快速搭建运行环境
+# 完整环境快照见 requirements.txt（pip freeze 导出，含大量间接依赖）
+# 安装：pip install -r requirements-core.txt
+
+# ---------- Web 服务 ----------
+fastapi
+uvicorn==0.54.0
+pydantic==2.13.5
+starlette
+websockets
+
+# ---------- 结构化存储 / 缓存 ----------
+PyMySQL==1.2.3
+redis==8.1.0
+
+# ---------- 向量检索 ----------
+pymilvus==2.4.9
+milvus==2.2.16
+milvus-model
+
+# ---------- 嵌入 / 重排 / 分类模型 ----------
+torch==2.12.0
+transformers==5.14.1
+sentence-transformers
+FlagEmbedding
+safetensors==0.8.0
+modelscope
+
+# ---------- 检索算法 ----------
+rank-bm25==0.2.2
+jieba==0.42.1
+numpy==2.2.6
+scikit-learn
+
+# ---------- LLM SDK / LangChain ----------
+openai==3.19.2
+langchain-core==1.6.4
+langchain-community==0.4.2
+langchain-openai==1.6.6
+langchain-text-splitters==1.1.2
+
+# ---------- 文档解析（PDF / Word / PPT / 图片 OCR） ----------
+pymupdf
+python-docx
+python-pptx
+Pillow==12.2.0
+opencv-python
+rapidocr-onnxruntime
+unstructured==0.18.32
+
+# ---------- 数据处理 / 工具 ----------
+pandas==2.3.3
+tqdm==4.69.1
+requests==2.34.2
+
+# ---------- 评估（RAGAS） ----------
+ragas
+datasets==5.0.0

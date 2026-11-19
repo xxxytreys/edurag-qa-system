@@ -1,0 +1,98 @@
+# ========== 敏感信息（严禁上传） ==========
+config.ini
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.*
+
+# ========== 模型权重（体积过大，需另行下载） ==========
+# 用目录内通配而非 "目录/"：目录本身被忽略后 git 不再进入，README 例外永远无法生效
+rag_qa/models/**
+models/**
+checkpoints/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.msgpack
+*.msgpack
+flax_model.*
+tf_model.*
+pytorch_model.*
+
+# 保留说明文件，避免克隆后目录缺失
+!rag_qa/models/README.md
+
+# ========== 训练输出 ==========
+rag_qa/core/bert_results/
+rag_qa/core/tmp_trainer/
+bert_results/
+tmp_trainer/
+runs/
+wandb/
+
+# ========== Python 缓存 ==========
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ========== 虚拟环境 ==========
+.venv/
+venv/
+env/
+ENV/
+
+# ========== IDE / 编辑器 ==========
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ========== 日志与临时文件 ==========
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+
+# ========== 缓存与索引 ==========
+mysql_qa/cache/
+cache/
+.milvus/
+milvus_data/
+*.index
+*.faiss
+*.pkl
+
+# ========== 课程资料与数据集（含第三方版权内容，不随仓库分发） ==========
+# 用目录内通配而非 "目录/"：目录本身被忽略后 git 不再进入，README 例外永远无法生效
+rag_qa/data/**
+mysql_qa/data/**
+datasets/
+*.parquet
+
+# 保留说明文件，避免克隆后目录缺失
+!rag_qa/data/README.md
+!mysql_qa/data/README.md
+
+# ========== Jupyter ==========
+.ipynb_checkpoints/
+
+# ========== 系统文件 ==========
+Thumbs.db
+desktop.ini
+

@@ -1,0 +1,39 @@
+# 配置示例文件：复制为 config.ini 后填入真实值
+# 注意：config.ini 已被 .gitignore 排除，切勿提交真实密钥
+
+[mysql]
+host = 127.0.0.1
+user = root
+password = 你的MySQL密码
+database = 你的库名
+
+[redis]
+host = 127.0.0.1
+port = 6379
+password = 你的Redis密码（无密码则留空）
+db = 0
+
+[logger]
+log_file = logs/app.log
+
+[milvus]
+host = 127.0.0.1
+port = 19530
+database_name = default
+collection_name = 你的集合名
+
+[llm]
+model = qwen-plus
+dashscope_api_key = 你的DashScope密钥（也可用环境变量 DASHSCOPE_API_KEY 覆盖）
+dashscope_base_url = https://dashscope.aliyuncs.com/compatible-mode/v1
+
+[retrieval]
+parent_chunk_size = 512
+child_chunk_size = 256
+chunk_overlap = 50
+retrieval_k = 5
+candidate_m = 20
+
+[app]
+valid_sources = 学科1,学科2
+customer_service_phone = 400-000-0000
